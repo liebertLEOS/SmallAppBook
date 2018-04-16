@@ -1,15 +1,18 @@
-# 微信小程序－知亦行
+# 微信小程序－在线阅读
 
 ### 说明：
 
-实现了知亦行首页功能，特色：
-- 顶部tab栏选择
+- 首页展示
+- 个人中心
+- 文章评论
+- 阅读记录
+- 文章搜索
 - 上拉加载
-- 较美观的图文排版
+- 下拉刷新
 
 ### 数据接口:
 
-使用本地数据
+本地缓存和三方服务
 
 ### 目录结构：
 
@@ -24,8 +27,3 @@
 
 ### 项目截图：
 
-https://www.getweapp.com/project?projectId=5835c8f7bb2538f8186c70ad
-
-### 感谢：
-
-本项目原始版本由dengqiangxi提供：https://github.com/dengqiangxi/WechatApp-KnowWhere
