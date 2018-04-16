@@ -1,0 +1,19 @@
+<!--pages/user/index/index.wxml-->
+<view class="container">
+  <view class="user-header">
+    <image class="user-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="user-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="menu">
+    <block wx:for="{{menu}}">
+      <navigator url="{{item.url}}">
+        <view class="item">
+          <i class="icon fa {{item.icon}}" aria-hidden="true"></i>
+          <text>{{item.title}}</text>
+          <i class="arrow fa fa-angle-right" aria-hidden="true"></i>
+        </view>
+      </navigator>
+    </block>
+  </view>
+</view>
+

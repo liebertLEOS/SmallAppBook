@@ -1,0 +1,58 @@
+<!--pages/detail/index/index.wxml-->
+<loading hidden='{{!loading}}'>加载中...</loading>
+<view  class='container page' hidden="{{article == null}}">  
+  <view class='article'>
+    <text class='article-title'>{{article.title}}</text>
+    <text class='article-meta'>{{article.time}} {{article.author}}</text>
+    <text class='article-content'>{{article.content}}</text>
+  </view>
+  <view class='article-comment'>
+    <view class='comment-head'>
+    <text>热门评论</text>
+    </view>
+    <view class='write-comment'>
+      <navigator url='/pages/detail/comment/index?id={{article.id}}&title={{article.title}}'>
+        <text bindtap='switchComment'>我要留言</text>
+        <i class="fa fa-pencil" aria-hidden="true"></i>
+      </navigator>
+    </view>
+    <view class='comment-list'>
+      <block wx:for="{{commentList}}" wx:key='{{id}}'>
+        <view class='item'>
+          <view class='user-avatar'>
+            <image src='{{item.user.avatar}}'></image>
+          </view>
+          <view class='item-main'>
+            <view class='item-head'>
+              <view class='nickname'>{{item.user.nickname}}<i class='istop' wx:if='{{item.user.istop}}'>置顶</i></view>
+              <view class='star'>
+                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                <text>{{item.user.star}}</text>
+              </view>
+            </view>
+            <view class='item-body'>
+              <view class='user-say'>
+                <view class='content'>{{item.user.say}}</view>
+                <text class='time'>昨天</text>
+                <text class='line'></text>
+              </view>
+              <view class='author-reply' wx:if='{{item.reply}}'>
+                <view class='reply-head'>
+                  <text>作者回复</text>
+                  <view class='star'>
+                    <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                    <text>{{item.reply.star}}</text>
+                  </view>
+                </view>
+                <view class='reply-content'>
+                  <text class='content'>{{item.reply.say}}</text>
+                  <text class='time'>昨天</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

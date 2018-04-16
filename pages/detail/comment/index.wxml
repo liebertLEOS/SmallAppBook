@@ -1,0 +1,43 @@
+<!--pages/detail/comment/index.wxml-->
+<loading hidden='{{!loading}}'>提交中...</loading>
+<view class='content'>
+  <view class='write-comment'>
+  <form bindsubmit='submit'>
+      <view class='head'>{{articleTitle}}</view>
+      <view class='body'>
+        <textarea name='textarea' placeholder='留言仅代表个人观点'></textarea>
+      </view>
+      <view class='foot'>
+        <button class='btn btn-submit' form-type='submit'>提交</button>
+      </view>
+    </form>
+  </view>
+  <view class='comment'>
+    <view class='comment-head'>
+      <text>我的评论</text>
+    </view>
+     <view class='comment-list'>
+      <view class='item' wx:for='{{commentList}}'>
+        <view class='user-avatar'>
+          <image src='{{item.avatar}}'></image>
+        </view>
+        <view class='item-main'>
+          <view class='item-head'>
+            <view class='nickname'>{{item.nickname}}<i class='istop' wx:if='{{item.istop}}'>置顶</i></view>
+            <view class='star'>
+              <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+              <text>{{item.star}}</text>
+            </view>
+          </view>
+          <view class='item-body'>
+            <view class='user-say'>
+              <view class='content'>{{item.say}}</view>
+              <text class='time'>昨天<text class='op-delete'>删除</text></text>
+              <text class='line'></text>
+            </view>
+          </view>
+        </view>
+      </view>
+     </view>
+  </view>
+</view>

@@ -1,0 +1,24 @@
+<!--pages/history/history.wxml-->
+<view class="container page" >
+  <view class="section-list">
+    <block wx:for="{{historyList}}">
+      <view class="section-item">
+        <i class="icon fa fa-clock-o" aria-hidden="true"></i>
+        <view class="section-head">{{item.date}}</view>
+        <view class="section-body">
+          <block wx:for="{{item.articleList}}">
+            <view class="article-list">
+              <view class="meta">
+                <text>{{item.meta}}</text>
+              </view>
+              <view class="title">{{item.title}}</view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="loading" hidden="{{!loading}}"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i>正在载入更多...</view>
+  <view class="loading" hidden="{{!loadingFail}}"><i class="fa fa-times-circle" aria-hidden="true"></i>载入失败，请检查网络...</view>
+  <view class="loading complete" hidden="{{!loadingComplete}}">—— 别拉了，我也是有底线的 ——</view>
+</view>

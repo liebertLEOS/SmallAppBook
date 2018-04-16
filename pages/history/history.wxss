@@ -1,0 +1,71 @@
+/* pages/history/history.wxss */
+.page{
+  background-color: #efefef;
+}
+.section-list{
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  position: relative;
+  background-color: #fff;
+}
+.section-list:after{
+  position: absolute;
+  top: 0;
+  left: 40rpx;
+  content: "";
+  display: block;
+  width: 4rpx;
+  height: 100%;
+  background-color: #efefef;
+}
+.section-item{
+  position: relative;
+  padding-left: 40rpx;
+  margin-bottom: 40rpx;
+}
+.section-item .icon{
+  position: absolute;
+  top: 10rpx;
+  left: -15rpx;
+  color: #e0620d;
+  border-radius: 50%;
+  background-color: #fff;
+  font-size: 40rpx;
+  z-index: 1;
+}
+.section-item .section-head{
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 35rpx;
+  color: #e0620d;
+  margin-top: 30rpx;
+}
+.article-list{
+  margin-top: 20rpx;
+}
+.article-list .meta{
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 25rpx;
+  color: #666;
+}
+.article-list .title{
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 35rpx;
+  font-weight: bold;
+  color: #675643;
+}
+.loading{
+  font-size: 30rpx;
+  color: #7b7b7b; 
+  text-align: center;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.loading i{
+  margin-right: 10rpx;
+}  
+.loading.complete:before{  
+  display: none;  
+}  

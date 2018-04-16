@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/history/history",
+    "pages/user/index/index",
+    "pages/user/basic/basic",
+    "pages/search/index",
+    "pages/detail/comment/index",
+    "pages/detail/index/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "老兵说阳明",
+    "navigationBarBackgroundColor": "#ff812d",
+    "backgroundColor": "#efefef"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#e0620d",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-selected.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/search/index",
+        "iconPath": "images/search.png",
+        "selectedIconPath": "images/search-selected.png",
+        "text": "文章搜索"
+      },
+      {
+        "pagePath": "pages/history/history",
+        "iconPath": "images/notes.png",
+        "selectedIconPath": "images/notes-selected.png",
+        "text": "阅读记录"
+      },
+      {
+        "pagePath": "pages/user/index/index",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user-selected.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

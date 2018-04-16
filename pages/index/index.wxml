@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<loading hidden='{{!loading}}'>加载中...</loading>
+<view class="container">
+  <scroll-view class="page__bd" scroll-y="true" bindscrolltoupper="scrollUpper" bindscrolltolower="scrollLower">
+     <swiper class="swiper" indicator-dots="{{indicatorDots}}" auto-play="{{autoplay}}" duration="{{duration}}" interval="{{interval}}">
+      <block wx:for="{{swiper}}">
+        <swiper-item>
+          <navigator url="{{item.url}}">
+            <view class="swipe-wrapper">
+              <image src="{{item.imagePath}}" lazy-load="true" mode="scaleToFill"></image>
+            </view>
+          </navigator>
+        </swiper-item>
+      </block>
+    </swiper> 
+    <view class="news-item-container">
+      <block wx:for="{{news}}">
+        <view class="news-item">
+          <navigator url="{{item.url}}" hover-class="navigator-hover">
+            <view class="news-item-txt">
+              <text class="news-item-name">{{item.title}}</text>
+              <text class="news-item-desc">{{item.desc}}</text>
+            </view>
+            </navigator>
+        </view>
+      </block>
+    </view>
+    <view class="loading" hidden="{{!searchLoading}}"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i>正在载入更多...</view>
+    <view class="loading complete" hidden="{{!searchLoadingComplete}}">—— 别拉了，我也是有底线的 ——</view>
+  </scroll-view>
+</view>
